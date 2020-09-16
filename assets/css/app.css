@@ -1,0 +1,56 @@
+* {
+
+}
+h1 {
+    color: red;
+    font-family: Arial;
+    font-size: 5em;
+}
+p {
+    color: gray;
+    font-family: Verdana;
+    font-size: medium;
+}
+
+a {
+	color:#3be83b;
+	background-color: black;
+	font-size: 35px;	
+}
+
+@media print{
+	h1 {
+		text-align:center;
+		color:blue;
+	}
+}
+
+h1, h2, h3 {
+  color: #8A8E27;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.2em; }
+
+p span{
+	text-decoration: underline;
+	color:black;
+}
+
+p.parrafo_destacado{
+	color:blue;
+}
+
+p#parrafo_unico{
+	color: orange;
+}
+
+
+
+
+
+
+

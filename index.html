@@ -1,421 +1,50 @@
-<!DOCTYPE html>
-<html lang="es">
-	<head>
-		<title>
-			Mi sitio web
-		</title> 
-		<meta charset="utf-8">
-		<style type="text/css">
-			#arriba{
-				background-color: red;
-			}
-			table{
-				border-collapse: collapse;
-			}
-			table, td {
-				border: 1px solid black;
-			}
-		</style> 
-	</head>
-	<body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<title>Ejemplo de estilos con CSS</title> 
 
-		<h2>
-			Calificaciones
-		</h2> 
-
-		<table> 
-			<tr>
-				<td colspan="4" >
-					<label>
-						A
-					</label>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="1">
-					<label>
-						B
-					</label>
-				</td>
-				<td>
-					<label>
-						C
-					</label>
-				</td>
-				<td >
-					<label>
-						E
-					</label>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<label>
-						F
-					</label>
-				</td>
-				<td >
-					<label>
-						G
-					</label>
-				</td>
-				<td>
-					<label>
-						H
-					</label>
-				</td> 
-			</tr>
-		</table>
-
-		<hr>
-
-
-		<table >
-			
-			<tr>
-				<td>
-					<a>
-						Curso
-					</a>
-				</td>
-				<td>
-					<b>
-						Horas
-					</b>
-				</td>
-				<td>
-					<b>
-						Horarios
-					</b>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					CSS
-				</td>
-				<td>
-					20
-				</td>
-				<td>
-					16:00 - 20:00
-				</td>
-			</tr>
-			<tr>
-				<td>
-					HTML
-				</td>
-				<td>
-					20
-				</td>
-				<td>
-					16:00 - 20:00
-				</td>
-			</tr>
-			<tr>
-				<td>
-					JS
-				</td>
-				<td align="center">
-					60
-				</td>
-				<td>
-					16:00 - 20:00
-				</td>
-			</tr>
-
-		</table>
-
-
-		<form method="POST" action="">
-			
-			<h3>
-				Registro
-			</h3>
-
-			<fieldset>
-				<legend>
-					Datos personales
-				</legend>
-
-				<label for="nombre">
-					Nombre
-				</label> <br>
-				<input type="text" name="" id="nombre">
-				<br>
-
-				<label>
-					Apellidos
-				</label><br>
-				<input type="text" name="">
-
-			</fieldset>
-
-			<fieldset>
-				<legend>
-					Datos de contacto
-				</legend>
-
-				<label>
-					Teléfono
-				</label><br>
-				<input type="text" name="">
-				<br>
-
-				<label>
-					Email
-				</label><br>
-				<input type="email" name="" required="">
-			</fieldset>
-			&nbsp;
-			<fieldset>
-				<legend>
-					Datos obligatorios
-				</legend>
-
-				<label>
-					Razón de acceso
-				</label><br>
-				<input type="" name="">
-				<br>
-
-				<label>
-					Descripción de la razón (Explique claramente porque desea acceder)
-				</label><br>
-				<textarea rows="5" cols="42" >Hola</textarea>
-
-			</fieldset>
-
-			<fieldset>
-				<legend>
-					Seleccione lo que aplique
-				</legend>
-
-				<label>
-					País
-				</label>
-				<select>
-					<option> 
-						Seleccione su país
-					</option>
-					<option value="52">
-						México
-					</option>
-					<option>
-						Guatemala
-					</option>
-					<option>
-						Guatepeor
-					</option>
-					<option>
-						El Salvador
-					</option>
-				</select>
-				<br>
-
-				<label>
-					Idioma
-				</label>
-				<br>
-				<select size="5">
-					<option selected="">Es</option>
-					<option>Uk</option>
-					<option>En</option>
-					<option>Fr</option>
-					<option>Jp</option>
-				</select>
-				<br>
-
-				<label>
-					Intereses
-				</label><br>
-				<select size="4" multiple="">
-					<option>
-						Música
-					</option>
-					<option selected="">
-						Viajes
-					</option>
-					<option>
-						Turismo
-					</option>
-					<option value="4">
-						Motos
-					</option>
-				</select>
-				<br>
-
-				<label>
-					Comidas:
-				</label><br>
-				<select>
-					
-					<optgroup label="Desauynos">
-						<option>
-							Wafles
-						</option>
-						<option>
-							Huevos
-						</option>
-						<option>
-							Pollito frito
-						</option>
-					</optgroup>
-
-					<optgroup label="Comidas">
-						<option>
-							Pizza
-						</option>
-						<option>
-							Chile relleno
-						</option>
-						<option>
-							Maruchan
-						</option>
-					</optgroup>
-
-				</select>
-
-
-			</fieldset>
-
-			<input type="submit" name="">
-		</form>
-
-		<div>
-			<a target="_self" name="enlace1" href="aves.html">
-				Aves
-			</a>
-		</div>
-
-		<ul>
-			<li>
-				Hola
-			</li>
-			<li>
-				Adios
-			</li>
-			<li>
-				Hellow
-			</li>
-		</ul>
-
-		<ol>
-			<li>Paso </li>
-			<li>
-				PAso
-			</li>
-			<li>
-				Coco
-			</li>
-		</ol>
-
-		<dl>
-			<dt>
-				SGML
-			</dt>
-			<dd>
-				Metalenguaje para la definición de otros lenguajes de marcado
-			</dd>
-
-			<dt>RSS</dt>
-			<dt>GML</dt>
-			<dt>XHTML</dt>
-			<dt>SVG</dt>
-			<dt>XUL</dt>
-			<dd>
-				Lenguajes derivados de XML para determinadas aplicaciones
-			</dd>
-		</dl>
-
-		<img src="lenguaje.png" alt="Portada personas hablando" longdesc="https://www.asha.org/public/speech/development/Que-es-el-Lenguaje/" name="portada" title="Hola">
-
-		<img src="imagen.gif" usemap="#mapa_zonas" />
+	<link rel="stylesheet" type="text/css" href="./assets/css/app.css" media="all"> 
+</head>
  
-<map name="mapa_zonas">
-  <area shape="rect" coords="20,25,84,113" href="rectangulo.html" />
-  <area shape="polygon" coords="90,25,162,26,163,96,89,25,90,24" href="triangulo.html" />
-  <area shape="circle" coords="130,114,29" href="circulo.html" />
-  <area shape="rect" coords="19,156,170,211" href="mailto:rectangulo@direccion.com" />
-  <area shape="default" nohref="nohref" />
-</map>
+<body>
+  <h1>Titular de la página</h1> 
 
-		<h2>
-			Primera sección
-		</h2>
+  <h2>
+  	Subtitulo de la página
+  </h2>
 
-		<p id="arriba">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <p>
+  	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <span>veniam</span>,
+  	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  	consequat. <span>Duis</span> aute irure dolor in reprehenderit in voluptate velit esse
+  	cillum dolore eu fugiat nulla pariatur. <span>Excepteur</span> sint occaecat cupidatat non
+  	proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a href=""> xoxo </a>
+  </p>
 
-		</p>
+  <a href="">
+  	leer <span>más</span>
+  </a>
 
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
+  <h2>
+  	Siguiente contenido
+  </h2>
 
-		<a target="_self" name="enlace1" href="#ultima">
-			Ultima sección
-		</a>
 
-		<h1>
-			Segunda sección
-		</h1>
+  <p class="parrafo_destacado">
+	  Lorem ipsum dolor sit amet...
+	</p>
 
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
+  <p id="parrafo_unico" >
+  	Nunc sed lacus et 
+  	<a href="#" class="parrafo_destacado">est adipiscing</a> accumsan...
+  </p>
 
-		<a href="">
-			Ir arriba
-		</a>
+  <p class="parrafo_destacado">	
+  	Class aptent taciti sociosqu ad litora...
+  </p>
 
-		<h1>
-			Tercera sección
-		</h1>
-
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
-
-		<a name="tercera">
-			Ir arriba
-		</a>
-
-		<h1>
-			Cuarta sección
-		</h1>
-
-		<p id="ultima">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
-
-		<a href="aves.html#dos" >
-			Ir arriba
-		</a>
-		<script type="text/javascript" src="archivo.js"></script>
-	</body>	
+</body>
 </html>
