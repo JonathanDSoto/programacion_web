@@ -1,88 +1,109 @@
-* {
-
+#content{
+	background-color: #8080802b;
+	width: 80%;
+	max-width: 1000px;
+	margin: auto;
 }
-body {
-	color:red; 
-	width: auto; 
+#header{
+	background-color: yellow; 
+	width: 100%;
+	border-style: solid; 
 }
-.content{
-	/*width: 95%; */
-	padding: 10px;
-	margin:auto;
-	background-color: #80808052; 
-}
-.header{
-	width: auto;
-	padding: 10px;
+#menu{
 	background-color: orange;
+	width: 100%;  
+	border-style: solid;
 }
-.header a{
-	text-decoration: unset;
-	color:white;
-	background-color: inherit;
+#body{
+	width: 100%;
+	background-image: url(../img/tacochido.jpg); 
+	background-position: center;
+	background-repeat: repeat;
 }
-.header ul{
-	list-style: none;
+#sidebar{
+	width: 20%;
+	display: inline-block; 
+	min-height: 200px;
+	border-style: solid;
 }
-.header li{
+#main{
+	width: 57%;
+	display: inline-block; 
+	min-height: 200px;
+	border-style: solid;
+}
+#others{
+	width: 20%;
+	display: inline-block; 
+	min-height: 200px;
+	border-style: solid;
+}
+#footer{
+	background-color: orange;
+	width: 100%;  
+	border-style: solid;
+}
+#menu ul{
+	list-style: none; 
+    margin-block-start: 0;
+    margin-block-end: 0; 
+}
+#menu ul li{
+	display: inline; 
+	margin-left: 10px;
+}
+#logo{
+	width: 80%;
 	display: inline-block;
-	margin-left: 10%;
 }
-h1 {
-    color: red;
-    font-family: Arial;
-    font-size: 5em;
-    padding: 10px 5px 10px 5px;
-    border-style: dotted;
-    border-width: 10px;
+#buscador{
+	width: 19%;
+	display: inline-block;
 }
-p {
-    color: rgba(0,0,255,0.5);
-    font-family: Verdana;
-    font-size: medium;
+#sidebar h3{
+	padding: 0;
+	margin: 0;
 }
-p.separado{
-	margin-left: 10%;
+#sidebar ul{
+	list-style: none;
+	padding: 0;
+	margin:0;
 }
-a {
-	color:#3be83b;
-	background-color: black;
-	font-size: 35px;	
+.content_post img{
+	width: 100px;
+	float: left;
+	margin:5px;
 }
+.post{
 
-@media print{
-	h1 {
-		text-align:center;
-		color:blue;
-	}
+	margin: 20px 10px 0px 10px;
+	
+	border-top-style: dashed;
+	border-right-style: double;
+	border-bottom-style: dotted;
+	border-left-style: solid;
+
+	border-top-width: 5px;
+	border-right-width: 1em;
+	border-bottom-width: thick;
+	border-left-width: thin;/**/
+
+	border-top-color: #CC0000;
+	border-right-color: blue;
+	border-bottom-color: #00FF00;
+	border-left-color: green;
 }
-
-h1, h2, h3 {
-  color: #8A8E27;
-  font-weight: normal;
-  font-family: Arial, Helvetica, sans-serif;
+#links{
+	width: 80%;
+	display: inline-block;
 }
-
-h1 { font-size: 2em; color: rgb(150,22,200); }
-h2 { font-size: 1.5em; color:rgb(50%,20%,25%); }
-h3 { font-size: 1.2em; color:green; }
-
-p span{
-	text-decoration: underline;
-	color:black;
+#links ul{
+	list-style: none; 
 }
-
-p.parrafo_destacado{
-	color:blue;
+#links li{ 
+	display: inline-block;
 }
-
-p#parrafo_unico{
-	color: orange;
+#copy{
+	width: 19%;
+	display: inline-block;
 }
-
-
-
-
-
-
-
