@@ -107,3 +107,8 @@
 	width: 19%;
 	display: inline-block;
 }
+h1{
+	/*position: relative;
+	left: 2em;*/
+	position: fixed;
+}
