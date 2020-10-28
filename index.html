@@ -165,151 +165,20 @@
 	</div> 
 	<script type="text/javascript"> 
 
-		var numero_1;
-		var numero_2; 
+		var cadena = prompt("Ingrese la candea")
+		alert(palindromo(cadena))
 
-		numero_1 = 3;
-		numero_2 = 5;
+		function palindromo(cadena){
+			let cadena_original = cadena.split(' ').join('').toLowerCase();
+			let cadena_reverse = cadena_original.split('').reverse().join('');
 
-		var resultado = numero_1 + numero_2;
-
-		console.log(resultado)
-
-		var sueldo = 100; // variable entera
-		var descuento = 100.05; //variable decimal
-		var nombre = "jUanito ";
-		var apellidos = 'lore';
-		var letra = 'c';
-
-		var nombre_completo = nombre.concat(apellidos);
-		console.log(nombre_completo.toLowerCase())
-
-		var otra_cosa = nombre_completo + sueldo;
-		console.log(otra_cosa.toUpperCase())
-
-		console.log(nombre_completo.charAt(1))
-		console.log(nombre_completo[1])
-		console.log(nombre_completo.indexOf('o'))
-		console.log(nombre_completo.lastIndexOf('o'))
-
-		var sub_cadena = nombre_completo.substring(0,5)
-		console.log(sub_cadena)
-
-		apellidos = letra;
-
-		var texto = "parrafo de \" ejemplo \n con comillas '' dentro";
-
-		var texto2 = ' parrafo \\ con comillas \t dobles "" ';
-
-		var parrafo = ' aasd asd asd asdasda \'asdad ';
-
-
-		var dias = ["lunes","martes","miércoles","jueves","viernes","sábado","domingo",1,texto2];
-
-		console.log(dias.length)
-
-		var semana = "lunes martes miércoles jueves viernes sábado domingo";
-		semana = semana.split(" ");
-		console.log(semana)
-
-		semana.push("wakaka")
-
-		console.log(semana)
-
-		semana.pop()
-
-		console.log(semana)
-
-		semana.shift()
-
-		console.log(semana)
-
-		semana.unshift("wakaka")
-
-		console.log(semana)
-
-		semana.reverse();
-
-		var semana_candena = semana.join(" ");
-		console.log(semana_candena)
-
-		var flag = true;
-		var otraflag = false;
-
-		var i = 0;
-
-		i++;
-
-		++i;
-
-		i+=1;
-
-		i--;
-
-		--i;
-
-		i-=1;
-
-		console.log(i)
- 
-		numero_1 = 3;
-		numero_2 = 5;
-
-		var numero_3 = ++numero_1 + numero_2;
-
-		console.log(numero_3)
-		console.log(numero_1)
-
-		var visible = false;
-
-		console.log( !visible )
-
-		var numero_4 = 5;
-
-		numero_4 += 3;
-
-		numero_4 -= 1;
-
-		numero_4 *= 2;
-
-		numero_4 /= 2;
-
-		numero_4 %= 2;
-
-		if('1'===1.0)
-		{
-			console.log("hola")
+			if (cadena_original==cadena_reverse)
+				return "Es palindromo";
+			else
+				return "No es palindromo";
 		}
 
-		var edad = 1;
-
-		if (edad >= 18) {
-			console.log("mayor de edad")
-		}else if( edad >= 10){
-			console.log("niño")
-		}else if(edad >=5){
-			console.log("pequeñin")
-		}else{
-			console.log("bby")
-		}
-
-		//var nombre = prompt("Hola");
-		//console.log(nombre)
-		var i = 0;
-		for (i; i < 7; i++ ) {
-			console.log(dias[i])
-
-		}
-
-		for( i in dias){
-			console.log(dias[i])
-		}
-
-		var sueldo_completo = 12312.3123123;
-		console.log(sueldo_completo)
-		sueldo_completo = sueldo_completo.toFixed(2)
-		console.log(sueldo_completo)
-
+		
 	</script> 
 </body>
 </html>
