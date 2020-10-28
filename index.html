@@ -177,9 +177,23 @@
 
 		var sueldo = 100; // variable entera
 		var descuento = 100.05; //variable decimal
-		var nombre = "juanito ";
+		var nombre = "jUanito ";
 		var apellidos = 'lore';
 		var letra = 'c';
+
+		var nombre_completo = nombre.concat(apellidos);
+		console.log(nombre_completo.toLowerCase())
+
+		var otra_cosa = nombre_completo + sueldo;
+		console.log(otra_cosa.toUpperCase())
+
+		console.log(nombre_completo.charAt(1))
+		console.log(nombre_completo[1])
+		console.log(nombre_completo.indexOf('o'))
+		console.log(nombre_completo.lastIndexOf('o'))
+
+		var sub_cadena = nombre_completo.substring(0,5)
+		console.log(sub_cadena)
 
 		apellidos = letra;
 
@@ -191,6 +205,33 @@
 
 
 		var dias = ["lunes","martes","miércoles","jueves","viernes","sábado","domingo",1,texto2];
+
+		console.log(dias.length)
+
+		var semana = "lunes martes miércoles jueves viernes sábado domingo";
+		semana = semana.split(" ");
+		console.log(semana)
+
+		semana.push("wakaka")
+
+		console.log(semana)
+
+		semana.pop()
+
+		console.log(semana)
+
+		semana.shift()
+
+		console.log(semana)
+
+		semana.unshift("wakaka")
+
+		console.log(semana)
+
+		semana.reverse();
+
+		var semana_candena = semana.join(" ");
+		console.log(semana_candena)
 
 		var flag = true;
 		var otraflag = false;
@@ -252,8 +293,23 @@
 			console.log("bby")
 		}
 
-		var nombre = prompt("Hola");
-		console.log(nombre)
+		//var nombre = prompt("Hola");
+		//console.log(nombre)
+		var i = 0;
+		for (i; i < 7; i++ ) {
+			console.log(dias[i])
+
+		}
+
+		for( i in dias){
+			console.log(dias[i])
+		}
+
+		var sueldo_completo = 12312.3123123;
+		console.log(sueldo_completo)
+		sueldo_completo = sueldo_completo.toFixed(2)
+		console.log(sueldo_completo)
+
 	</script> 
 </body>
 </html>
