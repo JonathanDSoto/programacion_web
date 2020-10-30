@@ -165,19 +165,28 @@
 	</div> 
 	<script type="text/javascript"> 
 
-		var cadena = prompt("Ingrese la candea")
-		alert(palindromo(cadena))
+		var palabra = prompt("Ingrese la palabra a evaluar");
 
-		function palindromo(cadena){
-			let cadena_original = cadena.split(' ').join('').toLowerCase();
-			let cadena_reverse = cadena_original.split('').reverse().join('');
+		if (esPalindromo(palabra))
+			alert("La cadena es palindromo")
+		else
+			alert("La cadena no es palindromo")
 
-			if (cadena_original==cadena_reverse)
-				return "Es palindromo";
-			else
-				return "No es palindromo";
-		}
-
+		function esPalindromo(p){
+			
+			let clean = p.toLowerCase().replace(/ /g,'');
+			let x = 0;
+			
+			for (var i = clean.length - 1; i >= 0; i--) {
+				
+				if (clean[x]!=clean[i]) {
+					return false;
+				}
+				x++; 
+			}
+			return true;
+			
+		} 
 		
 	</script> 
 </body>
