@@ -1,193 +1,275 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>
-		Javascript!
-	</title>  
-	<style type="text/css">
-		.container{
-			width: 80%;
-			margin:auto;
-			min-height: 500px;
-			background-color: #F2EDEC;
-		}
-		.content{
-			width: 30%;
-			margin:auto;
-			float: left;
-			margin-left: 2%;
-			display: inline-block;
-		}
-		.form-element{
-			margin-bottom: 10px;
-		}
-	</style>
-</head>
-<body>
-	<div class="container">
-
-		<div class="content">
-			<fieldset>
-				<legend>
-					Datos personales
-				</legend>
-
-
-				<div class="form-element">
-					<label>
-						Nombre
-					</label>
-					<input type="text" placeholder="juanito" name="">
-				</div>
-
-				<div class="form-element">
-					<label>
-						Apellidos
-					</label>
-					<input type="text" placeholder="leon" name="">
-				</div>
-
-				<div class="form-element">
-					<label>
-						Fecha nacimiento
-					</label>
-					<input type="text" placeholder="090390" name="">
-				</div>
-
-				<div class="form-element">
-					<label>
-						Sexo
-					</label>
-					<select>
-						<option>M</option>
-						<option>H</option>
-					</select>
-				</div>
-
-				<div class="form-element">
-					<button type="submit">
-						Gudardar información
-					</button>
-				</div>
- 
-			</fieldset>
-		</div>
-		
-		<div class="content">
-			<fieldset>
-				<legend>
-					Datos ubicación
-				</legend>
-
-
-				<div class="form-element">
-					<label>
-						Nombre
-					</label>
-					<input type="text" placeholder="juanito" name="">
-				</div>
-
-				<div class="form-element">
-					<label>
-						Apellidos
-					</label>
-					<input type="text" placeholder="leon" name="">
-				</div>
-
-				<div class="form-element">
-					<label>
-						Fecha nacimiento
-					</label>
-					<input type="text" placeholder="090390" name="">
-				</div>
-
-				<div class="form-element">
-					<label>
-						Sexo
-					</label>
-					<select>
-						<option>M</option>
-						<option>H</option>
-					</select>
-				</div>
- 
-			</fieldset>
-		</div>
-
-		<div class="content">
-			<fieldset>
-				<legend>
-					Datos laborales
-				</legend>
-
-
-				<div class="form-element">
-					<label>
-						Nombre
-					</label>
-					<input type="text" placeholder="juanito" name="">
-				</div>
-
-				<div class="form-element">
-					<label>
-						Apellidos
-					</label>
-					<input type="text" placeholder="leon" name="">
-				</div>
-
-				<div class="form-element">
-					<label>
-						Fecha nacimiento
-					</label>
-					<input type="text" placeholder="090390" name="">
-				</div>
-
-				<div class="form-element">
-					<label>
-						Sexo
-					</label>
-					<select>
-						<option>M</option>
-						<option>H</option>
-					</select>
-				</div>
- 
-			</fieldset>
-		</div>
-
-		<noscript>
-			<h1>
-				No soporta javascript
-			</h1>
-		</noscript>
-
-	</div> 
-	<script type="text/javascript"> 
-
-		var palabra = prompt("Ingrese la palabra a evaluar");
-
-		if (esPalindromo(palabra))
-			alert("La cadena es palindromo")
-		else
-			alert("La cadena no es palindromo")
-
-		function esPalindromo(p){
-			
-			let clean = p.toLowerCase().replace(/ /g,'');
-			let x = 0;
-			
-			for (var i = clean.length - 1; i >= 0; i--) {
-				
-				if (clean[x]!=clean[i]) {
-					return false;
-				}
-				x++; 
+	<head>
+		<meta charset="utf-8">
+		<title>
+			Javascript!
+		</title>  
+		<style type="text/css">
+			.container{
+				width: 80%;
+				margin:auto;
+				min-height: 500px;
+				background-color: #F2EDEC;
 			}
-			return true;
+			.content{
+				width: 30%;
+				margin:auto;
+				float: left;
+				margin-left: 2%;
+				display: inline-block;
+			}
+			.form-element{
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+
+			<div class="content">
+				<fieldset>
+					<legend>
+						Datos personales
+					</legend>
+
+
+					<div class="form-element">
+						<label>
+							Nombre
+						</label>
+						<input type="text" placeholder="juanito" name="nombre">
+					</div>
+
+					<div class="form-element">
+						<label>
+							Apellidos
+						</label>
+						<input type="text" placeholder="leon" name="">
+					</div>
+
+					<div class="form-element">
+						<label>
+							Fecha nacimiento
+						</label>
+						<input type="text" placeholder="090390" name="">
+					</div>
+
+					<div class="form-element">
+						<label>
+							Sexo
+						</label>
+						<select>
+							<option>M</option>
+							<option>H</option>
+						</select>
+					</div>
+
+					<div class="form-element">
+						<button id="submitButtonForm" type="submit">
+							Gudardar información
+						</button>
+					</div>
+	 
+				</fieldset>
+
+				<div class="post">
+					<!-- <h1>
+						Título
+					</h1> -->
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+			</div>
 			
-		} 
-		
-	</script> 
-</body>
+			<div class="content">
+				<fieldset>
+					<legend>
+						Datos ubicación
+					</legend>
+
+
+					<div class="form-element">
+						<label>
+							Nombre
+						</label>
+						<input type="text" placeholder="juanito" name="nombre">
+					</div>
+
+					<div class="form-element">
+						<label>
+							Apellidos
+						</label>
+						<input type="text" placeholder="leon" name="">
+					</div>
+
+					<div class="form-element">
+						<label>
+							Fecha nacimiento
+						</label>
+						<input type="text" placeholder="090390" name="">
+					</div>
+
+					<div class="form-element">
+						<label>
+							Sexo
+						</label>
+						<select>
+							<option>M</option>
+							<option>H</option>
+						</select>
+					</div>
+	 
+				</fieldset>
+				<div>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+			</div>
+
+			<div class="content">
+				<fieldset>
+					<legend>
+						Datos laborales
+					</legend>
+
+
+					<div class="form-element">
+						<label>
+							Nombre
+						</label>
+						<input type="text" placeholder="juanito" name="nombre">
+					</div>
+
+					<div class="form-element">
+						<label>
+							Apellidos
+						</label>
+						<input type="text" placeholder="leon" name="">
+					</div>
+
+					<div class="form-element">
+						<label>
+							Fecha nacimiento
+						</label>
+						<input type="text" placeholder="090390" name="">
+					</div>
+
+					<div class="form-element">
+						<label>
+							Sexo
+						</label>
+						<select>
+							<option>M</option>
+							<option>H</option>
+						</select>
+					</div>
+	 
+				</fieldset>
+				<div>
+					<p id="parrafo">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+			</div>
+
+			<noscript>
+				<h1>
+					No soporta javascript
+				</h1>
+			</noscript>
+
+		</div> 
+		<script type="text/javascript"> 
+
+			var ps = document.getElementsByTagName('p'); 
+
+			var names = document.getElementsByName('nombre'); 
+
+			var divs = document.getElementsByClassName('form-element') 
+
+			var button = document.getElementById('submitButtonForm') 
+
+			//Elemento 1
+			var title = document.createElement("h1");
+			var content_title = document.createTextNode('Título');
+			title.appendChild(content_title);
+
+			var target = document.getElementsByClassName('post');
+			target[0].prepend(title); 
+
+
+			//Elemento 2
+			var button = document.createElement("button");
+			var text_button = document.createTextNode("Consultar información");
+			button.appendChild(text_button);
+
+			var fieldsets = document.getElementsByTagName('fieldset'); 
+			fieldsets[1].appendChild(button)
+
+			//Elemento 3
+			var enlace = document.createElement('a');
+			var text_link = document.createTextNode('Leer más');
+			enlace.appendChild(text_link);
+
+			var p = document.getElementById('parrafo');
+			p.appendChild(enlace);
+
+
+			for (var i = 0; i < divs.length; i++) {
+				
+				//divs[i].parentNode.removeChild(divs[i]);
+				divs[i].remove();
+			}
+
+			enlace.href = "http://localhost/programacion_web/";
+
+			for (var i = 0; i < ps.length; i++) {
+				ps[i].style.backgroundColor = getRandomColor();
+			}
+
+			function esPalindromo(p){
+				
+				let clean = p.toLowerCase().replace(/ /g,'');
+				let x = 0;
+				
+				for (var i = clean.length - 1; i >= 0; i--) {
+					
+					if (clean[x]!=clean[i]) {
+						return false;
+					}
+					x++; 
+				}
+				return true;
+				
+			} 
+
+			function getRandomColor() {
+			  var letters = '0123456789ABCDEF';
+			  var color = '#';
+			  for (var i = 0; i < 6; i++) {
+			    color += letters[Math.floor(Math.random() * 16)];
+			  }
+			  return color;
+			}
+			
+		</script> 
+	</body>
 </html>
