@@ -66,7 +66,7 @@
 					</div>
 
 					<div class="form-element">
-						<button onclick="saveDataForm()" onmouseover="rbc(this)" id="submitButtonForm" type="submit">
+						<button onclick="saveDataForm()" onmouseover="rbc(this,1)" id="submitButtonForm" type="submit">
 							Gudardar información
 						</button>
 					</div>
@@ -203,7 +203,7 @@
 				alert('Hola')
 			}
 
-			function rbc(obj){
+			function rbc(obj,numero){
 				obj.style.backgroundColor = getRandomColor();
 			}
 
