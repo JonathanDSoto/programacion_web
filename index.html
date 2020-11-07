@@ -24,7 +24,7 @@
 			}
 		</style>
 	</head>
-	<body onload="alert('ya esta todo listo')">
+	<body onkeydown="keyListener(event)" > 
 		<div class="container">
 
 			<div class="content">
@@ -38,7 +38,7 @@
 						<label>
 							Nombre
 						</label>
-						<input type="text" placeholder="juanito" name="nombre">
+						<input type="text" placeholder="juanito" name="nombre"  >
 					</div>
 
 					<div class="form-element">
@@ -128,7 +128,7 @@
 	 
 				</fieldset>
 				<div>
-					<p>
+					<p onmousemove="clickParrafito(event)">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -207,6 +207,25 @@
 				obj.style.backgroundColor = getRandomColor();
 			}
 
+			function clickParrafito(e){ 
+				console.log(e);
+
+				console.log(e.clientX);
+				console.log(e.clientY);
+				
+			}
+
+			function keyListener(e)
+			{
+				console.log(e.type)
+				console.log(e.keyCode)
+				console.log(e.key)
+			}
+
+			var p = document.getElementById('parrafo');
+
+			p.onclick = clickParrafito;
+
 			// var gender = document.getElementById('gender');
 
 			// gender.onchange = saludo;
@@ -244,9 +263,7 @@
 			//Elemento 3
 			var enlace = document.createElement('a');
 			var text_link = document.createTextNode('Leer más');
-			enlace.appendChild(text_link);
-
-			var p = document.getElementById('parrafo');
+			enlace.appendChild(text_link); 
 			p.appendChild(enlace);
 
 
