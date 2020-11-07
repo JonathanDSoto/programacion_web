@@ -24,7 +24,7 @@
 			}
 		</style>
 	</head>
-	<body onkeydown="keyListener(event)" > 
+	<body onkeydown="keyListener(event)" onmousemove="clickParrafito(event)"> 
 		<div class="container">
 
 			<div class="content">
@@ -128,7 +128,7 @@
 	 
 				</fieldset>
 				<div>
-					<p onmousemove="clickParrafito(event)">
+					<p >
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -208,10 +208,13 @@
 			}
 
 			function clickParrafito(e){ 
-				console.log(e);
+				//console.log(e);
 
-				console.log(e.clientX);
-				console.log(e.clientY);
+				console.log("client x: "+e.clientX);
+				console.log("client y: "+e.clientY);
+
+				console.log("screen x: "+e.screenX);
+				console.log("screen y: "+e.screenY);
 				
 			}
 
@@ -225,6 +228,8 @@
 			var p = document.getElementById('parrafo');
 
 			p.onclick = clickParrafito;
+			console.log(p.innerHTML)
+			p.innerHTML = '<h1>hola</h1>'
 
 			// var gender = document.getElementById('gender');
 
