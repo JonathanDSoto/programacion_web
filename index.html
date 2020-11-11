@@ -28,51 +28,52 @@
 		<div class="container">
 
 			<div class="content">
-				<fieldset>
-					<legend>
-						Datos personales
-					</legend>
+				<form name="personal_data">
+					<fieldset>
+						<legend>
+							Datos personales
+						</legend>
 
 
-					<div class="form-element">
-						<label>
-							Nombre
-						</label>
-						<input type="text" placeholder="juanito" name="nombre"  >
-					</div>
+						<div class="form-element">
+							<label>
+								Nombre
+							</label>
+							<input type="text" placeholder="juanito" name="name" onblur="onlyLetters(this)" >
+						</div>
 
-					<div class="form-element">
-						<label>
-							Apellidos
-						</label>
-						<input type="text" placeholder="leon" name="">
-					</div>
+						<div class="form-element">
+							<label>
+								Apellidos
+							</label>
+							<input type="text" placeholder="leon" name="lastname">
+						</div>
 
-					<div class="form-element">
-						<label>
-							Fecha nacimiento
-						</label>
-						<input type="text" placeholder="090390" name="">
-					</div>
+						<div class="form-element">
+							<label>
+								Fecha nacimiento
+							</label>
+							<input type="text" placeholder="090390" name="date" onkeypress="return onlyNumbers(event,this)">
+						</div>
 
-					<div class="form-element">
-						<label>
-							Sexo
-						</label>
-						<select>
-							<option>M</option>
-							<option>H</option>
-						</select>
-					</div>
+						<div class="form-element">
+							<label>
+								Sexo
+							</label>
+							<select name="gender" onchange="validate(this)">
+								<option>M</option>
+								<option>H</option>
+							</select>
+						</div>
 
-					<div class="form-element">
-						<button onclick="saveDataForm()" onmouseover="rbc(this,1)" id="submitButtonForm" type="submit">
-							Gudardar información
-						</button>
-					</div>
-	 
-				</fieldset>
-
+						<div class="form-element">
+							<button onclick="saveDataForm()" onmouseover="rbc(this,1)" id="submitButtonForm" type="submit">
+								Gudardar información
+							</button>
+						</div>
+		 
+					</fieldset>
+				</form>
 				<div class="post">
 					<!-- <h1>
 						Título
@@ -89,44 +90,54 @@
 			</div>
 			
 			<div class="content">
-				<fieldset>
-					<legend>
-						Datos ubicación
-					</legend>
+				<form>
+					<fieldset>
+						<legend>
+							Datos ubicación
+						</legend>
 
 
-					<div class="form-element">
-						<label>
-							Nombre
-						</label>
-						<input type="text" placeholder="juanito" name="nombre">
-					</div>
+						<div class="form-element">
+							<label style="display: block;text-align: center;">
+								Menú a tomar
+							</label> 
 
-					<div class="form-element">
-						<label>
-							Apellidos
-						</label>
-						<input type="text" placeholder="leon" name="">
-					</div>
+							Desayuno
+							<input type="radio" value="desayuno" name="seleccion">
 
-					<div class="form-element">
-						<label>
-							Fecha nacimiento
-						</label>
-						<input type="text" placeholder="090390" name="">
-					</div>
+							Comida
+							<input type="radio" value="comida" name="seleccion">
 
-					<div class="form-element">
-						<label>
-							Sexo
-						</label>
-						<select id="gender">
-							<option>M</option>
-							<option>H</option>
-						</select>
-					</div>
-	 
-				</fieldset>
+							Cena
+							<input type="radio" value="cena" name="seleccion">
+						</div>
+
+						<div class="form-element">
+							<label>
+								Apellidos
+							</label>
+							<input type="text" placeholder="leon" name="">
+						</div>
+
+						<div class="form-element">
+							<label>
+								Fecha nacimiento
+							</label>
+							<input type="text" placeholder="090390" name="">
+						</div>
+
+						<div class="form-element">
+							<label>
+								Sexo
+							</label>
+							<select id="gender">
+								<option>M</option>
+								<option>H</option>
+							</select>
+						</div>
+		 
+					</fieldset>
+				</form>
 				<div>
 					<p >
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -140,44 +151,46 @@
 			</div>
 
 			<div class="content">
-				<fieldset>
-					<legend>
-						Datos laborales
-					</legend>
+				<form>
+					<fieldset>
+						<legend>
+							Datos laborales
+						</legend>
 
 
-					<div class="form-element">
-						<label>
-							Nombre
-						</label>
-						<input type="text" placeholder="juanito" name="nombre">
-					</div>
+						<div class="form-element">
+							<label>
+								Nombre
+							</label>
+							<input type="text" placeholder="juanito" name="nombre">
+						</div>
 
-					<div class="form-element">
-						<label>
-							Apellidos
-						</label>
-						<input type="text" placeholder="leon" name="">
-					</div>
+						<div class="form-element">
+							<label>
+								Apellidos
+							</label>
+							<input type="text" placeholder="leon" name="">
+						</div>
 
-					<div class="form-element">
-						<label>
-							Fecha nacimiento
-						</label>
-						<input type="text" placeholder="090390" name="">
-					</div>
+						<div class="form-element">
+							<label>
+								Fecha nacimiento
+							</label>
+							<input type="text" placeholder="090390" name="">
+						</div>
 
-					<div class="form-element">
-						<label>
-							Sexo
-						</label>
-						<select>
-							<option>M</option>
-							<option>H</option>
-						</select>
-					</div>
-	 
-				</fieldset>
+						<div class="form-element">
+							<label>
+								Mensaje
+							</label>
+							<textarea maxlength="5" cols="" rows="5"></textarea>
+							<label>
+								100
+							</label>
+						</div>
+		 
+					</fieldset>
+				</form>
 				<div>
 					<p id="parrafo">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -197,7 +210,61 @@
 			</noscript>
 
 		</div> 
-		<script type="text/javascript">  
+		<script type="text/javascript">
+
+			console.log(document.forms) 
+			console.log(document.forms[1].elements[1])
+
+			var primerFormulario = document.personal_data;
+			console.log(primerFormulario)  
+
+			var primerInput = document.personal_data.name;
+			//primerInput.value = "Jonathan"
+			console.log(primerInput.value)
+
+			function validate(target)
+			{
+				console.log(target.selectedIndex)
+			}
+
+
+			function onlyLetters(target)
+			{
+				var valor = target.value; 
+				for (var i = valor.length - 1; i >= 0; i--) {
+					if (valor[i]==1) {
+						target.value = "";
+						alert("no se aditen números")
+						break;
+					}
+				}
+				var lastname = document.getElementsByName('lastname')[0]
+				lastname.focus()
+			}
+
+			function onlyNumbers(e,target)
+			{
+				//console.log(e)
+				//console.log(target)
+				if (e.keyCode>=48 && e.keyCode<=57 || e.keyCode == 45) {
+					return true;
+				}else{
+					return false;
+					// var valor = target.value;
+					// valor = valor.substring(0,valor.length-1);
+					// target.value = valor
+
+					// console.log(target.value)
+				}
+			}
+
+
+			var selecciones = document.getElementsByName('seleccion');
+			console.log(selecciones[1].checked)
+
+			
+
+
 
 			function saveDataForm(){
 				alert('Hola')
@@ -210,25 +277,25 @@
 			function clickParrafito(e){ 
 				//console.log(e);
 
-				console.log("client x: "+e.clientX);
-				console.log("client y: "+e.clientY);
+				// console.log("client x: "+e.clientX);
+				// console.log("client y: "+e.clientY);
 
-				console.log("screen x: "+e.screenX);
-				console.log("screen y: "+e.screenY);
+				// console.log("screen x: "+e.screenX);
+				// console.log("screen y: "+e.screenY);
 				
 			}
 
 			function keyListener(e)
 			{
-				console.log(e.type)
-				console.log(e.keyCode)
-				console.log(e.key)
+				// console.log(e.type)
+				// console.log(e.keyCode)
+				// console.log(e.key)
 			}
 
 			var p = document.getElementById('parrafo');
 
 			p.onclick = clickParrafito;
-			console.log(p.innerHTML)
+			//console.log(p.innerHTML)
 			p.innerHTML = '<h1>hola</h1>'
 
 			// var gender = document.getElementById('gender');
