@@ -18,7 +18,6 @@
 <body>
 	<h1> 
 		Hola mi nombre es <?= $fullname; ?>
-		hola
 	</h1>
 	
 </body>
