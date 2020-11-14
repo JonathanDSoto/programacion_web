@@ -6,7 +6,7 @@
 	//esto es un comentario de linea
 	/*esto es codigo
 	basura*/
-	#otro comentario de linea
+	#otro comentario de linea 
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,6 +18,7 @@
 <body>
 	<h1> 
 		Hola mi nombre es <?= $fullname; ?>
+		hola
 	</h1>
 	
 </body>
