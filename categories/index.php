@@ -5,7 +5,11 @@
 
 	$categories = $categoryController->get();
 
-	#echo json_encode($categories);
+	if (isset($_SESSION)==false || 
+		isset($_SESSION['id'])==false) {
+		
+		header("Location:../");
+	}
 ?>
 <!DOCTYPE html>
 <html>
