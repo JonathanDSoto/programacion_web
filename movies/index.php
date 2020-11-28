@@ -78,7 +78,7 @@
 		</tbody>
 	</table>
 
-	<form action="../app/movieController.php" method="POST" enctype="multipart/form-data" >
+	<form action="<?=BASE_PATH?>/movie" method="POST" enctype="multipart/form-data" >
 		<fieldset>
 			<legend>
 				Add Movie
@@ -147,6 +147,7 @@
 				Save
 			</button>
 			<input type="hidden" name="action" value="store">
+			<input type="hidden" name="token" value="<?= $_SESSION['token'] ?>">
 
 		</fieldset>
 	</form>

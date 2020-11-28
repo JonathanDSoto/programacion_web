@@ -1,0 +1,6 @@
+Options +FollowSymLinks -MultiViews
+RewriteEngine on 
+
+RewriteRule ^auth$ app/authController.php
+RewriteRule ^movie$ app/movieController.php
+RewriteRule ^category$ app/categoryController.php

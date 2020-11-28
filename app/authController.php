@@ -1,33 +1,39 @@
 <?php 
 
 
-if (!isset($_SESSION)) {
-	session_start();
-}
+include_once "app.php";
 include_once "connectionController.php";
 
 if (isset($_POST['action'])) {
 
-	$authController = new AuthController();
+	if (isset($_POST['token']) && $_POST['token']==$_SESSION['token']) { 
 
-	switch ($_POST['action']) {
-		case 'register':
-			
-			$name = strip_tags($_POST['name']);
-			$email = strip_tags($_POST['email']);
-			$password = strip_tags($_POST['password']);
+		$authController = new AuthController();
 
-			$authController->register($name,$email,$password);
+		switch ($_POST['action']) {
+			case 'register':
+				
+				$name = strip_tags($_POST['name']);
+				$email = strip_tags($_POST['email']);
+				$password = strip_tags($_POST['password']);
 
-		break;
-		case 'login':
-			
-			$email = strip_tags($_POST['email']);
-			$password = strip_tags($_POST['password']);
+				$authController->register($name,$email,$password);
 
-			$authController->access($email,$password);
+			break;
+			case 'login':
+				
+				$email = strip_tags($_POST['email']);
+				$password = strip_tags($_POST['password']);
 
-		break; 
+				$authController->access($email,$password);
+
+			break; 
+		}
+
+	}else{
+
+		$_SESSION['error'] = 'de seguridad';
+		header("Location:". $_SERVER['HTTP_REFERER'] );
 	}
 }
 
@@ -101,7 +107,7 @@ class AuthController
 						$_SESSION['email'] = $user['email'];  
 
 
-						header("Location:../categories" );
+						header("Location:".BASE_PATH."categories" );
 					}else{
 						$_SESSION['error'] = 'verifique los datos envíados'; 
 						header("Location:". $_SERVER['HTTP_REFERER'] );

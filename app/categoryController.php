@@ -1,41 +1,47 @@
 <?php
 
-if (!isset($_SESSION)) {
-	session_start();
-}
+
+include_once "app.php";
 include_once "connectionController.php";
 
 if (isset($_POST['action'])) {
+
+	if (isset($_POST['token']) && $_POST['token']==$_SESSION['token']) { 
 	
-	$categoryController = new CategoryController();
+		$categoryController = new CategoryController();
 
-	switch ($_POST['action']) {
-		case 'store':
-			
-			$name = strip_tags($_POST['name']);
-			$description = strip_tags($_POST['description']);
-			$status = strip_tags($_POST['status']);
+		switch ($_POST['action']) {
+			case 'store':
+				
+				$name = strip_tags($_POST['name']);
+				$description = strip_tags($_POST['description']);
+				$status = strip_tags($_POST['status']);
 
-			$categoryController->store($name,$description,$status);
+				$categoryController->store($name,$description,$status);
 
-		break; 
-		case 'update':
+			break; 
+			case 'update':
 
-			$name = strip_tags($_POST['name']);
-			$description = strip_tags($_POST['description']);
-			$status = strip_tags($_POST['status']);
-			$id = strip_tags($_POST['id']);
+				$name = strip_tags($_POST['name']);
+				$description = strip_tags($_POST['description']);
+				$status = strip_tags($_POST['status']);
+				$id = strip_tags($_POST['id']);
 
-			$categoryController->update($id,$name,$description,$status);
-		break;
-		case 'destroy':
+				$categoryController->update($id,$name,$description,$status);
+			break;
+			case 'destroy':
 
-			$id = strip_tags($_POST['id']);
+				$id = strip_tags($_POST['id']);
 
-			$categoryController->destroy($id);
-		break;
+				$categoryController->destroy($id);
+			break;
+		}
+		
+	}else{
+
+		$_SESSION['error'] = 'de seguridad';
+		header("Location:". $_SERVER['HTTP_REFERER'] );
 	}
-
 }
 
 class CategoryController
